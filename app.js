@@ -1,33 +1,19 @@
-{
-  /* <div id="parent">
-    <div id="child">
-        <h1>I am h1 tag </h1>
-        <h2>I am h2 tag </h2>
-    </div>
-</div> */
-}
-
 import React from "react";
-import ReactDOM from "react-dom/client";        
+import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "this is pune"),
-    React.createElement("h2", {}, "page "),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ])
-]);
+// React.createElement => ReactElement-js Object => HTMLElement(render)
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "abc", bhaskar: "patil" },
-  "hello world in react??",
-);
+//jsx (transpiled before it reaches the JS) - Parcel - Babel
+
+//JSX => Babels transpiles it to  React.createElement => ReactElement-JS Object => HTMLElement 
+
+const jsxheading = <h1 id="heading" className="headA"> hellow jsx heading </h1>;
+
+console.log(jsxheading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
-console.log(parent);
+root.render(jsxheading);
+
+
+ 
