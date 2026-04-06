@@ -1,19 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React.createElement => ReactElement-js Object => HTMLElement(render)
+// React element
 
-//jsx (transpiled before it reaches the JS) - Parcel - Babel
+const Jsxheading = () => (
+  <h1 id="heading" className="headA">
+    hellow jsx heading
+  </h1>
+);
 
-//JSX => Babels transpiles it to  React.createElement => ReactElement-JS Object => HTMLElement 
+// React Functional components
 
-const jsxheading = <h1 id="heading" className="headA"> hellow jsx heading </h1>;
 
-console.log(jsxheading);
+const HeadingComponent2 = () => (
+  <div id="container">
+    <Jsxheading/> 
+    <h2>{200 * 2} error  </h2>
+    <h2>{console.log("testetijij ")} </h2>
+    <h1 className="heading"> heres REact functional components </h1>
+  </div>
+);
+
+console.log(HeadingComponent2);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxheading);
-
-
- 
+// root.render(root);
+root.render(<HeadingComponent2 />);
